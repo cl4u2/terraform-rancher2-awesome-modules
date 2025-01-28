@@ -93,3 +93,8 @@ variable ssh_port { # path to your public key.
    default = 22
    description = "the ssh port, default to 22"
 }
+# Define the list of labels as variables
+variable "node_labels" {
+  description = "Labels for the Kubernetes node"
+  type        = map(string)
+}
