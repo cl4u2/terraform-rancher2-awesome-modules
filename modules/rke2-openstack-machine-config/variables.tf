@@ -97,4 +97,5 @@ variable ssh_port { # path to your public key.
 variable "node_labels" {
   description = "Labels for the Kubernetes node"
   type        = map(string)
+  default     = null
 }
