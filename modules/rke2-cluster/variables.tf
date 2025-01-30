@@ -19,6 +19,7 @@ variable enable_network_policy {
 variable "machine_pools" {
   type = map(object({
     name                      = string
+    machine_labels            = map(string)
     cloud_credential_secret_name = string
     control_plane_role        = bool
     etcd_role                 = bool
@@ -48,8 +49,3 @@ variable "rke2_cluster_labels" {
   type        = map(string)
 }
 
-variable "rke2_machine_pool_labels" {
-  description = "Labels for the machine pool"
-  type        = map(string)
-  default     = {}
-}
