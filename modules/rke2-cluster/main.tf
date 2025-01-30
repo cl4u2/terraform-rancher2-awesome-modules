@@ -17,7 +17,6 @@ resource "rancher2_cluster_v2" "rke2_cluster" {
       for_each = var.machine_pools
       content {
         name                      = machine_pools.value.name
-        labels                    = var.rke2_machine_pool_labels
         machine_labels            = var.rke2_machine_pool_labels
         cloud_credential_secret_name = machine_pools.value.cloud_credential_secret_name
         control_plane_role        = machine_pools.value.control_plane_role
